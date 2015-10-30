@@ -1,25 +1,63 @@
-## Laravel PHP Framework
+## Google App Engine Laravel 4.2 Sample Application VERSION 1
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+<br/>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+The default Laravel 4.2 installed from the composer does not support Google App Engine. This version of laravel 4.2 project is tuned up specially for google app engine. Tuning up process can be quite hectic to do before the development or after, hence, without manually tuning your application you can download this repository and get a head start with your development. 
+ 
+## SetUp
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+First and foremostly change the following files as mentioned below.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+#### php.ini
+- Replace “your_bucket_name” with the name of the Google Cloud Storage (GCS) bucket that you set up.
 
-## Official Documentation
+#### app.yaml
+- Replace: <br>
+in <b>application: appengine-laravel-sample</b> with <b>"your_appengine_project_id"</b> <br>
+in <b>DEVELOPMENT_DB_NAME: 'ftechdash_db'</b> with <b>"your_db_name"</b> <br>
+in <b>DEVELOPMENT_DB_PASSWORD: ""</b> with <b>"your_mysql_password"</b> <br>
+in <b>DEVELOPMENT_DB_USERNAME: 'root'</b> with <b>"your_mysql_username"</b> <br><br>
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+in <b>PRODUCTION_CLOUD_SQL_INSTANCE: "/cloudsql/sample-portal:db</b>" with <b>"/cloudsql/'your-sql-instance"</b> <br>
+in <b>PRODUCTION_DB_NAME: 'ftechdash_db'</b> with <b>"your_db_name"</b> <br><br>
 
-### Contributing To Laravel
+In <b><your_proejct>/bootstrap/paths.php,</b> replace <your-bucket-name> with the name of your bucket. <br><br/>
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+Once done, you can add your local copy of the project into the <b>Google App Enigne Launcher</b>, and conviniently deply your application form your staging version to the production version in the cloud.
+### Bonus 
 
+The folder contains the following plugins, so you can start devleoping immediately.
+( a vote of thanks to all the developers workign in the following plugins. )
+- bootstrap
+- adminLTE Theme
+- bootstrap-slider
+- bootstrap-wysihtml5
+- ChartJS
+- ckeditor
+- colorpicker
+- datatables
+- datepicker
+- daterangepicker
+- fastchick
+- flot
+- fullcalendar
+- iCheck
+- input-mask
+- ionslider
+- jQuery
+- jQueryUI
+- kvectormap
+- knob
+- morris
+- pace
+- select2
+- slimscroll
+- sparkline
+- timepicker
+
+### Notes
+This version does not support the  Laravel Mail Driver.
+Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).<br><br>
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
