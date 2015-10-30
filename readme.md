@@ -12,16 +12,16 @@ First and foremostly change the following files as mentioned below.
 - Replace “your_bucket_name” with the name of the Google Cloud Storage (GCS) bucket that you set up.
 
 #### app.yaml
-- Replace: <br>
-in <b>application: appengine-laravel-sample</b> with <b>"your_appengine_project_id"</b> <br>
-in <b>DEVELOPMENT_DB_NAME: 'ftechdash_db'</b> with <b>"your_db_name"</b> <br>
-in <b>DEVELOPMENT_DB_PASSWORD: ""</b> with <b>"your_mysql_password"</b> <br>
-in <b>DEVELOPMENT_DB_USERNAME: 'root'</b> with <b>"your_mysql_username"</b> <br><br>
+Replace: <br>
++ in <b>application: appengine-laravel-sample</b> with <b>"your_appengine_project_id"</b> <br>
++ in <b>DEVELOPMENT_DB_NAME: 'ftechdash_db'</b> with <b>"your_db_name"</b> <br>
++ in <b>DEVELOPMENT_DB_PASSWORD: ""</b> with <b>"your_mysql_password"</b> <br>
++ in <b>DEVELOPMENT_DB_USERNAME: 'root'</b> with <b>"your_mysql_username"</b> <br><br>
 
-in <b>PRODUCTION_CLOUD_SQL_INSTANCE: "/cloudsql/sample-portal:db</b>" with <b>"/cloudsql/'your-sql-instance"</b> <br>
-in <b>PRODUCTION_DB_NAME: 'ftechdash_db'</b> with <b>"your_db_name"</b> <br><br>
++ in <b>PRODUCTION_CLOUD_SQL_INSTANCE: "/cloudsql/sample-portal:db</b>" with <b>"/cloudsql/'your-sql-instance"</b><br>
++ in <b>PRODUCTION_DB_NAME: 'ftechdash_db'</b> with <b>"your_db_name"</b><br><br>
 
-In <b><your_proejct>/bootstrap/paths.php,</b> replace <your-bucket-name> with the name of your bucket. <br><br/>
+In <b><your_proejct>/bootstrap/paths.php,</b> replace <b><your-bucket-name></b> with the name of your bucket. <br><br/>
 
 Once done, you can add your local copy of the project into the <b>Google App Enigne Launcher</b>, and conviniently deply your application form your staging version to the production version in the cloud.
 ### Bonus 
