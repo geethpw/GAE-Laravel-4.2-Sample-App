@@ -1,0 +1,27 @@
+--- 
+api_version: 1
+application: appengine-laravel-sample
+env_variables: 
+  DEVELOPMENT_DB_HOST: 'localhost'
+  DEVELOPMENT_DB_NAME: 'ftechdash_db'
+  DEVELOPMENT_DB_PASSWORD: ""
+  DEVELOPMENT_DB_USERNAME: 'root'
+  PRODUCTION_CLOUD_SQL_INSTANCE: "/cloudsql/finetech-portal:db"
+  PRODUCTION_DB_NAME: 'ftechdash_db'
+  PRODUCTION_DB_PASSWORD: ""
+  PRODUCTION_DB_USERNAME: 'root'
+handlers: 
+  - 
+    static_files: public/favicon.ico
+    upload: public/favicon\.ico
+    url: /favicon\.ico
+  - 
+    application_readable: true
+    static_files: public/\1
+    upload: .+\.(css|js|fonts|htm|html|css|js|jpg|png|eot|svg|ttf|woff|woff2|less|scss|dat)$
+    url: /(.+\.(css|js|fonts|htm|html|css|js|jpg|png|eot|svg|ttf|woff|woff2|less|scss|dat))$
+  - 
+    script: public/index.php
+    url: /.*
+runtime: php55
+version: one
